@@ -11,7 +11,7 @@ reload(sys)
 sys.setdefaultencoding("utf-8")
 """
 handler message              _____'_____
-start & copy right negative /Taylor Team\ MIT
+start & copy right Agent Sudo TeleAgent Team MIT
                            |______'______|
 """
 def run ():
@@ -32,18 +32,18 @@ def run ():
                             bot.send_action(chat_id,'typing')
                             key = json.dumps(
                             {'inline_keyboard':[[
-                            {'text':'Developer 👓','url':'https://telegram.me/negative'},
-                            {'text':'Taylor Team 🔌','url':'https://telegram.me/taylor_team'}
+                            {'text':'Developer 👓','url':'https://telegram.me/XHACKERX'},
+                            {'text':'TeleAgent Team 🔌','url':'https://telegram.me/TeleAgent_Team'}
                             ],
                             [
-                            {'text':'Your Info 🕶','url':'https://telegram.me/Taylor_tmtmbot?start=info'}
+                            {'text':'Your Info 🕶','url':'https://telegram.me/AgentPlusBot?start=info'}
                             ],
                             [
-                            {'text':'Taylor Team Inline','switch_inline_query':'taylor-team'}
+                            {'text':'TeleAgent Team Inline','switch_inline_query':'TeleAgent-team'}
                             ]
                             ]
                             })
-                            bot.send_msg(chat_id,'<b>Taylor Team Development</b>\ncommands : \n/time\n/about',reply_markup=key)
+                            bot.send_msg(chat_id,'<b>TeleAgent Team Development</b>\ncommands : \n/time\n/about',reply_markup=key)
                         if(command == '/time'):
                             bot.getUpdates(last_update+1)
                             bot.send_action(chat_id,'typing')
@@ -58,15 +58,15 @@ def run ():
                             markup = json.dumps({
                             'inline_keyboard':[
                             [
-                            {'text':'👇 Taylor Team 👇','callback_data':'1'}
+                            {'text':'👇 TeleAgent Team 👇','callback_data':'1'}
                             ],
                             [
-                            {'text':'Developer 🕶','url':'https://telegram.me/negative'},
-                            {'text':'Channel','url':'https://telegram.me/taylor_team'}
+                            {'text':'Developer 🕶','url':'https://telegram.me/XHACKERX'},
+                            {'text':'Channel','url':'https://telegram.me/TeleAgent_Team'}
                             ]
                             ]
                             })
-                            bot.send_photo(chat_id,open('photo-2016-06-09-01-09-41.jpg'),caption='@Taylor_Team',reply_markup=markup)
+                            bot.send_photo(chat_id,open('photo-2016-06-09-01-09-41.jpg'),caption='@TeleAgent_Team',reply_markup=markup)
                         if(command == '/info' or command == '/start info'):
                             bot.getUpdates(last_update+1)
                             bot.send_action(chat_id,'typing')
@@ -82,7 +82,7 @@ def run ():
                             ]
                             }
                             )
-                            bot.send_photo_file_id(chat_id,photo=s['result']['photos'][0][2]['file_id'],caption='ID : {}\nUsername : @{}\n@Taylor_Team'.format(user_id,username),reply_markup=markup)
+                            bot.send_photo_file_id(chat_id,photo=s['result']['photos'][0][2]['file_id'],caption='ID : {}\nUsername : @{}\n@TeleAgent_Team'.format(user_id,username),reply_markup=markup)
                         if(command == '/type'):
                             if(update['message']['reply_to_message']['entities'][0]['type']):
                                 msg = update['message']['reply_to_message']['entities'][0]['type']
@@ -96,12 +96,12 @@ def run ():
                     message_idd = update['callback_query']['message']['message_id']
                     id_from = update['callback_query']['message']['chat']['id']
                     if(data == '1'):
-                        bot.answerCallbackQuery(call_id,text='👇👇👇\nDeveloper: Negative\nTeam : Taylor Team\ncommands :\n/time\n/about\n/help',show_alert=True)
+                        bot.answerCallbackQuery(call_id,text='👇👇👇\nDeveloper: Agent SUDO\nTeam : TeleAgent Team\ncommands :\n/time\n/about\n/help',show_alert=True)
                 if 'inline_query' in update:
                     bot.getUpdates(last_update+1)
                     inline_query_idd = update['inline_query']['id']
                     inline_query_query = update['inline_query']['query']
-                    jso = json.dumps([{'type':'photo','id':'1','photo_url':'http://vip.opload.ir/vipdl/95/3/negative23/photo-2016-06-09-01-09-41.jpg','thumb_url':'http://vip.opload.ir/vipdl/95/3/negative23/photo-2016-06-09-01-09-41.jpg','caption':'@Taylor_Team'}])
+                    jso = json.dumps([{'type':'photo','id':'1','photo_url':'http://vip.opload.ir/vipdl/95/3/negative23/photo-2016-06-09-01-09-41.jpg','thumb_url':'http://vip.opload.ir/vipdl/95/3/negative23/photo-2016-06-09-01-09-41.jpg','caption':'@TeleAgent_Team'}])
                     bot.answerInlineQuery(inline_query_id=inline_query_idd,results=[jso],cache_time=1)
 
 run()
